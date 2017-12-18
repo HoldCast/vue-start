@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>子组件获取父组件的数据1</title>
 	<script src="bower_components/vue/dist/vue.js"></script>
 	<style>
 	</style>
@@ -14,8 +14,8 @@
 	</div>
 
 	<template id="aaa">
-		<h1>11111</h1>
-		<bbb :mmm="msg2" :my-msg="msg"></bbb>
+		<h1>父组件</h1>
+		<bbb :msg="msg1" :my-msg="msg2"></bbb>
 	</template>
 	<script>
 		var vm=new Vue({
@@ -27,15 +27,15 @@
 				'aaa':{
 					data(){
 						return {
-							msg:111,
-							msg2:'我是父组件的数据'
+							msg1: '我是父组件的数据1',
+							msg2: '我是父组件的数据2'
 						}
 					},
 					template:'#aaa',
 					components:{
 						'bbb':{
-							props:['mmm','myMsg'],
-							template:'<h3>我是bbb组件->{{mmm}} <br> {{myMsg}}</h3>'
+							props:['msg','myMsg'], //先拿过来放到属性中
+							template:'<h3>子组件->{{msg}} <br> {{myMsg}}</h3>'	//然后进行使用
 						}
 					}
 				}

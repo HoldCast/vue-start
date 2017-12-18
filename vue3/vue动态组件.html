@@ -14,6 +14,13 @@
 		<component :is="a"></component>
 	</div>
 
+	<template id="aaa">
+		<h2>我是aaa组件</h2>
+	</template>
+	<template id="bbb">
+		<h2>我是{{bData}}组件</h2>
+	</template>
+
 	<script>
 		var vm=new Vue({
 			el:'#box',
@@ -22,10 +29,15 @@
 			},
 			components:{
 				'aaa':{
-					template:'<h2>我是aaa组件</h2>'
+					template:'#aaa'
 				},
 				'bbb':{
-					template:'<h2>我是bbb组件</h2>'
+					template:'#bbb',
+					data(){
+					    return{
+					        bData: 'bbbbbbbbbbbbbb'
+					    }
+					}
 				}
 			}
 		});
