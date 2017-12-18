@@ -137,7 +137,7 @@ slot:
 	类似ng里面 transclude  （指令）
 --------------------------------------------
 vue-> SPA应用，单页面应用
-	vue-resouce	交互
+	vue-resource	交互
 	vue-router	路由
 
 	根据不同url地址，出现不同效果

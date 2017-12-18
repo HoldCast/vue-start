@@ -15,12 +15,18 @@
 
 	<template id="aaa">
 		<span>我是父级 -> {{msg}}</span>
+		<!--接收数据-->
 		<bbb @child-msg="get"></bbb>
 	</template>
+
+
+
 	<template id="bbb">
 		<h3>子组件-</h3>
 		<input type="button" value="send" @click="send">
 	</template>
+
+
 	<script>
 		var vm=new Vue({
 			el:'#box',
@@ -52,6 +58,7 @@
 							template:'#bbb',
 							methods:{
 								send(){
+								    //发送到哪里
 									this.$emit('child-msg',this.a);
 								}
 							}
