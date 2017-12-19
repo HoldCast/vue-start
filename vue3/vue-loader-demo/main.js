@@ -7,4 +7,3 @@ new Vue({
 		app:App
 	}
 });
-

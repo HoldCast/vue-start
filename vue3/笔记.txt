@@ -285,6 +285,8 @@ webpak准备工作:
 	babel-runtime
 
 最最核心：
+
+    vue
 	
 
 	

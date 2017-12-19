@@ -8,12 +8,21 @@ module.exports={
 
 	module:{
 		loaders:[
-			{test:/\.vue$/, loader:'vue'},
-			{test:/\.js$/, loader:'babel', exclude:/node_modules/}
+			{
+				test:/\.vue$/,
+				loader:'vue-loader'
+			},
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env'],   //所有模式
+                        //plugins: ['transform-runtime']
+                    }
+                }
+            },
 		]
-	},
-	babel:{
-		presets:['es2015'],
-		plugins:['transform-runtime']
 	}
 };
