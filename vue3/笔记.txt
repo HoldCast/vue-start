@@ -281,12 +281,13 @@ webpak准备工作:
 	babel-loader
 	babel-core
 	babel-plugin-transform-runtime
+	babel-preset-env //最新的代替
 	babel-preset-es2015
 	babel-runtime
 
 最最核心：
 
-    vue
+    vue-loader
 	
 
 	

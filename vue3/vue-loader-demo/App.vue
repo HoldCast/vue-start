@@ -1,6 +1,8 @@
 <template>
 	<h1>welcome Vue</h1>
-	<h2 @click="change">{{msg}}</h2>
+	<h2 @click="change">
+		<span v-html="msg"></span>
+	</h2>
 	<my-menu></my-menu>
 </template>
 <script>
@@ -14,7 +16,7 @@
 		},
 		methods:{
 			change(){
-				this.msg='wahaha'
+				this.msg += '<i>wahaha</i>';
 			}
 		},
 		components:{
