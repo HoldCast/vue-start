@@ -11,7 +11,7 @@
 	export default{
 		data(){
 			return {
-				msg:'welcome Vue ^_^'
+				msg:'---------welcome Vue ^_^ -----------'
 			}
 		},
 		methods:{
